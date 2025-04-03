@@ -8,7 +8,7 @@ An interactive quiz platform where **teachers** can create and manage quizzes, a
 ✅ **Real-time quizzes** with unique room codes  
 ✅ **Live score updates** using Socket.io  
 ✅ **Secure authentication** with JWT  
-✅ **Statistical analysis** for performance evaluation  
+✅ **Statistical analysis** for performance evaluation (IN Progress)  
 ✅ **Seamless user experience** with an intuitive UI  
 
 ---
