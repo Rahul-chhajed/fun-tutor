@@ -10,7 +10,7 @@ function Dashboard() {
 
   return (
     <div>
-      <button onClick={() => routeChange('/')}>pay games</button>
+     
       <button onClick={() => routeChange('/quiz')}>make quizes</button>
       <button onClick={() => routeChange('/joinQuize')}>join quize</button>
     </div>
