@@ -14,7 +14,7 @@ function Dashboard() {
   const fetchQuizzes = async () => {
     try {
       const res = await axios.post(
-        'http://localhost:3000/api/quiz/my-quizzes',
+        'https://fun-tutor-backend-production.up.railway.app/api/quiz/my-quizzes',
         { email: localStorage.getItem('userEmail') },
         {
           headers: {
@@ -34,7 +34,7 @@ function Dashboard() {
 
   const handleDelete = async (quizTitle) => {
     try {
-      await axios.delete(`http://localhost:3000/api/quiz/delete/${encodeURIComponent(quizTitle)}`, {
+      await axios.delete(`https://fun-tutor-backend-production.up.railway.app/api/quiz/delete/${encodeURIComponent(quizTitle)}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
