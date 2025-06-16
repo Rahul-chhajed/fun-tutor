@@ -46,7 +46,7 @@ function Tfquestion({ title, positiveScore, negativeScore }) {
         }
         try {
             const response = await axios.post(
-                "http://localhost:3000/submit-questions",
+                "https://fun-tutor-backend-production.up.railway.app/submit-questions",
                 {
                     email,
                     quizTitle,
