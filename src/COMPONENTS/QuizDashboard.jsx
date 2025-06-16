@@ -15,7 +15,7 @@ const QuizDashboard = () => {
 
     if (quizTitle.trim()) {
       axios
-      .post("http://localhost:3000/api/quiz",
+      .post("https://fun-tutor-backend-production.up.railway.app/api/quiz",
         { userEmail: email, title: quizTitle },
         {
           headers: {
