@@ -27,7 +27,7 @@ const Signup = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-axios.post("http://localhost:3000/signup-form",formData)
+axios.post("https://fun-tutor-backend-production.up.railway.app/signup-form",formData)
 .then(response=>{
 
   localStorage.setItem("userEmail", formData.email);
