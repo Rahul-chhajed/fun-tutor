@@ -26,7 +26,7 @@ const QuizDetails = () => {
 
       try {
         const [quizres, participantres] = await Promise.all([
-          axios.post("http://localhost:3000/seequiz-form", {
+          axios.post("https://fun-tutor-backend-production.up.railway.app/seequiz-form", {
             email: userEmail,
             quizTitle: decodedTitle,
           }, {
