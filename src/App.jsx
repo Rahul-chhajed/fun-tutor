@@ -11,6 +11,7 @@ import Dashboard from "./COMPONENTS/Dashboard";
 import Deployment from "./COMPONENTS/Deployment";
 import QuizDashboard from "./COMPONENTS/QuizDashboard";
 import JoinQuize from "./COMPONENTS/JoinQuize";
+
 function App() {
   return (
     <Router>
@@ -30,11 +31,11 @@ function App() {
           path="/quiz"
           element={
             <ProtectedRoute>
-             <QuizDashboard />
+              <QuizDashboard />
             </ProtectedRoute>
           }
         />
-         <Route
+        <Route
           path="/format"
           element={
             <ProtectedRoute>
@@ -49,6 +50,7 @@ function App() {
               <JoinQuize />
             </ProtectedRoute>
           }
+        /> {/* ✅ This line was missing */}
         <Route
           path="/tf"
           element={
@@ -57,16 +59,22 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/see-quiz" element={
-          <ProtectedRoute>
-            <SeeQuiz />
-          </ProtectedRoute>
-        } />   
-        <Route path="/deploy" element={
-          <ProtectedRoute>
-            <Deployment />
-          </ProtectedRoute>
-        } />   
+        <Route
+          path="/see-quiz"
+          element={
+            <ProtectedRoute>
+              <SeeQuiz />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/deploy"
+          element={
+            <ProtectedRoute>
+              <Deployment />
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
