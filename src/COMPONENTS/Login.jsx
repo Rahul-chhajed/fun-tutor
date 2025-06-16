@@ -22,7 +22,7 @@ const Login = () => {
     });
   };
   const onSubmit = (data) => {
-    axios.post("http://localhost:3000/login-form", formData)
+    axios.post("https://fun-tutor-backend-production.up.railway.app/login-form", formData)
         .then(response => {
             localStorage.setItem("token", response.data.token);
             localStorage.setItem("userEmail", response.data.email);
