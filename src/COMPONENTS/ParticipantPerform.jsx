@@ -13,7 +13,7 @@ const ParticipantPerform = () => {
     const fetchPerformance = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.post("https://fun-tutor-backend-production.up.railway.app/get-participant-score", {
+        const res = await axios.post("http://localhost:3000/get-participant-score", {
           quizCode,
           participantEmail: email
         }, {
