@@ -101,19 +101,24 @@ const Signup = () => {
     watch,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    axios
-      .post('https://fun-tutor-backend-production.up.railway.app/signup-form', formData)
-      .then((response) => {
-        localStorage.setItem('userEmail', formData.email);
-        navigate('/Dashboard');
-      })
-      .catch((error) => {
-        console.log(error);
-        setError(error.response.data.message);
-      });
-  };
+ const onSubmit = (data) => {
+  axios
+    .post('https://fun-tutor-backend-production.up.railway.app/signup-form', formData, {
+      withCredentials: true,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then((response) => {
+      localStorage.setItem('userEmail', formData.email);
+      navigate('/Dashboard');
+    })
+    .catch((error) => {
+      console.log(error);
+      setError(error?.response?.data?.message || "Something went wrong.");
+    });
+};
+
 
   return (
     <div style={styles.container}>
