@@ -14,7 +14,7 @@ function Dashboard() {
   const fetchQuizzes = async () => {
     try {
       const res = await axios.post(
-        'https://fun-tutor-backend-production.up.railway.app/api/quiz/my-quizzes',
+        'http://localhost:3000/api/quiz/my-quizzes',
         { email: localStorage.getItem('userEmail') },
         {
           headers: {
