@@ -18,7 +18,7 @@ function Tf() {
             }
 
             const response = await axios.post(
-                "http://localhost:3000//check-title",
+                "http://localhost:3000/check-title",
                 {
                     title: sectionTitle,
                     quizTitle: quizTitle
