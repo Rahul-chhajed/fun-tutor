@@ -34,7 +34,7 @@ function Dashboard() {
 
   const handleDelete = async (quizTitle) => {
     try {
-      await axios.delete(`https://fun-tutor-backend-production.up.railway.app/api/quiz/delete/${encodeURIComponent(quizTitle)}`, {
+      await axios.delete(`http://localhost:3000/api/quiz/delete/${encodeURIComponent(quizTitle)}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
