@@ -11,7 +11,7 @@ const QuizDashboard = () => {
   const handleCreateQuiz = () => {
     if (quizTitle.trim()) {
       axios.post(
-        "https://fun-tutor-backend-production.up.railway.app/api/quiz",
+        "http://localhost:3000/api/quiz",
         { userEmail: email, title: quizTitle },
         { headers: { Authorization: `Bearer ${token}` } }
       )
