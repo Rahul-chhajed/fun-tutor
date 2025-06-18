@@ -18,7 +18,7 @@ function Deployment() {
   };
 
   useEffect(() => {
-    axios.post("https://fun-tutor-backend-production.up.railway.app/generate-code", {
+    axios.post("http://localhost:3000/generate-code", {
       quizTitle,
       quizTime,
       email,
