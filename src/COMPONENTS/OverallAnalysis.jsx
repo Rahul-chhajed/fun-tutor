@@ -33,7 +33,7 @@ const OverallAnalysis = () => {
         const fetchParticipants = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const res = await axios.post("https://fun-tutor-backend-production.up.railway.app/get-participant-scores", {
+                const res = await axios.post("http://localhost:3000/get-participant-scores", {
                     quizTitle: decodedTitle,
                     quizCode,
                 }, {
