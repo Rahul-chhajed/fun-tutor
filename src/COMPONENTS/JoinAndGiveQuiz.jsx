@@ -46,7 +46,7 @@ function JoinAndGiveQuiz() {
   
     try {
       const res = await axios.post(
-        'https://fun-tutor-backend-production.up.railway.app/api/quiz/validate-code',
+        'http://localhost:3000/api/quiz/validate-code',
         { quizCode: roomCode, email },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -155,7 +155,7 @@ function JoinAndGiveQuiz() {
 
     try {
       setSubmitting(true);
-      await axios.post('https://fun-tutor-backend-production.up.railway.app/api/quiz/submit-response', payload, {
+      await axios.post('http://localhost:3000/api/quiz/submit-response', payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('Quiz submitted successfully!');
