@@ -23,7 +23,7 @@ function SeeQuiz() {
       }
 
       try {
-        const response = await axios.post("https://fun-tutor-backend-production.up.railway.app/seequiz-form", {
+        const response = await axios.post("http://localhost:3000/seequiz-form", {
           email: userEmail,
           quizTitle: quizTitle, // Pass the quiz title
         }, {
@@ -50,7 +50,7 @@ function SeeQuiz() {
 
     try {
       await axios.post(
-        "https://fun-tutor-backend-production.up.railway.app/delete-question",
+        "http://localhost:3000/delete-question",
         { quizTitle, sectionId, questionId }, // Pass quizId and sectionId
         {
           headers: {
